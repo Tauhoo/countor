@@ -14,6 +14,7 @@ const Clock = styled.span`
   left: 25vw;
   font-size: 5.5rem;
   transform: translate(-50%,-50%);
+  font-family: 'Montserrat';
 `
 
 const Text = styled.span`
@@ -22,6 +23,7 @@ const Text = styled.span`
   left: 25vw;
   font-size: 2rem;
   transform: translate(-50%,-50%);
+  font-family: 'Montserrat';
 `
 
 export default class extends Component {

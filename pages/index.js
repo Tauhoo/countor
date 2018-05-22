@@ -11,9 +11,10 @@ export default class extends Component {
       <div>
         <Head>
           <title>Countor</title>
-          <meta name="viewport" content="initial-scale=1.0, width=device-width" key="viewport" />
+          <meta name="viewport"  key="viewport" />
+          <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet'/>
         </Head>
-        <style>{'body {margin: 0px; overflow: hidden;} html {font-size: 2vw;}'}</style>
+        <style>{'body {margin: 0px; padding: 0px; overflow: hidden;} html {margin: 0px; padding: 0px;font-size: 2vw;}'}</style>
         <body>
           <Display/>
           <TextEditor/>
