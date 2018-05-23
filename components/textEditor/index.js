@@ -6,14 +6,12 @@ import TextEditor from './textEditor'
 import ClockEditor from './clockEditor'
 const Container = styled.div`
   height: 69vh;
-  width: 50vw;
-  margin-left: 50vw;
+  width: 25vw;
+  transform: translateX(-100%);
+  margin-left: 100vw;
   padding-top: 1vh;
 `
 const TopContainer = styled.div`
-  height: 13vh;
-  width: calc(100%-1vh);
-  margin-bottom: 1vh;
   margin-left: 1vh;
   margin-right: 1vh;
 `

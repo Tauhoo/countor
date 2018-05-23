@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const Container = styled.div`
   display: inline-block;
-  background-color: white;
   width: calc(49%);
   margin-left: 1%;
   height: 100%;
@@ -15,33 +14,25 @@ const Selector = styled.select`
   font-family: 'Montserrat';
   display: block;
   margin-left: 50%;
-  margin-top: 1vh;
-  width: calc(70%);
-  transform: translateX(-50%);
+  margin-top: 3vh;
+  width: 100%;
+  transform: translate(-50%,-50%);
   border-radius: 1vh;
-  height: 30%;
+  height: 4vh;
   outline: none;
-`
-
-const Topic = styled.span`
-  display: block;
-  font-family: 'Montserrat';
-  font-size: 1.1rem;
-  margin-left: 50%;
-  margin-top: 1vh;
-  transform: translateX(-50%);
+  border: 0px;
+  background-color: white;
 `
 
 export default class extends Component {
   render() {
     return (
       <Container>
-        <Topic>Clock font</Topic>
         <Selector>
-          <option>1</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
+          <option>clock font</option>
+          <option>clock font</option>
+          <option>clock font</option>
+          <option>clock font</option>
         </Selector>
       </Container>
     )

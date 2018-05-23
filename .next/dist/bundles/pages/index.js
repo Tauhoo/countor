@@ -81,11 +81,13 @@ module.exports =
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_styled_components__);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react__ = __webpack_require__("react");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_react___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_react__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_simple_timefield__ = __webpack_require__("react-simple-timefield");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_react_simple_timefield___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_react_simple_timefield__);
 var _jsxFileName = "/home/tauhoo/Documents/countdown/components/display/index.js";
 
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  position: absolute;\n  background-color: #1abc9c;\n  width: 100vw;\n  height: 100vh;\n  z-index: -1;\n"]),
-    _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  position: absolute;\n  top: 30vh;\n  left: 25vw;\n  font-size: 5.5rem;\n  transform: translate(-50%,-50%);\n  font-family: 'Montserrat';\n"]),
-    _templateObject3 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  position: absolute;\n  top: 50vh;\n  left: 25vw;\n  font-size: 2rem;\n  transform: translate(-50%,-50%);\n  font-family: 'Montserrat';\n"]);
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  position: absolute;\n  background-color: #1abc9c;\n  width: 100vw;\n  height: 100vh;\n  z-index: 0;\n"]),
+    _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  position: absolute;\n  top: 30vh;\n  left: calc(75vw/2);\n  transform: translate(-50%,-50%);\n"]),
+    _templateObject3 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  position: absolute;\n  top: 50vh;\n  left: calc(75vw/2);\n  font-size: 2rem;\n  transform: translate(-50%,-50%);\n  font-family: 'Montserrat';\n  text-align: center;\n  border: none;\n  outline: none;\n  background: none;\n  &::-webkit-input-placeholder { /* Chrome/Opera/Safari */\n    color: black;\n  }\n"]);
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -105,9 +107,18 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 
 
+
 var Container = __WEBPACK_IMPORTED_MODULE_0_styled_components___default.a.div(_templateObject);
-var Clock = __WEBPACK_IMPORTED_MODULE_0_styled_components___default.a.span(_templateObject2);
-var Text = __WEBPACK_IMPORTED_MODULE_0_styled_components___default.a.span(_templateObject3);
+var Clock = __WEBPACK_IMPORTED_MODULE_0_styled_components___default.a.div(_templateObject2);
+var Text = __WEBPACK_IMPORTED_MODULE_0_styled_components___default.a.input(_templateObject3);
+var inputStyle = {
+  fontSize: '5.5rem',
+  fontFamily: 'Montserrat',
+  width: '31.5vw',
+  border: 'none',
+  outline: 'none',
+  background: 'none'
+};
 
 var _default =
 /*#__PURE__*/
@@ -126,19 +137,31 @@ function (_Component) {
       return __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Container, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 32
+          lineNumber: 47
         }
       }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Clock, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 33
+          lineNumber: 48
         }
-      }, '00.00'), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Text, {
+      }, __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2_react_simple_timefield___default.a, {
+        value: '00:00',
+        onChange: function onChange(value) {
+          return;
+        },
+        style: inputStyle,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 34
+          lineNumber: 49
         }
-      }, "Yeah!!!"));
+      })), __WEBPACK_IMPORTED_MODULE_1_react___default.a.createElement(Text, {
+        type: "text",
+        placeholder: "Yeah!!!",
+        __source: {
+          fileName: _jsxFileName,
+          lineNumber: 55
+        }
+      }));
     }
   }]);
 
@@ -160,9 +183,8 @@ function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_styled_components__);
 var _jsxFileName = "/home/tauhoo/Documents/countdown/components/textEditor/clockEditor.js";
 
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  display: inline-block;\n  background-color: white;\n  width: calc(49%);\n  margin-left: 1%;\n  height: 100%;\n  border-radius: 1vh;\n  overflow: hidden;\n"]),
-    _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  font-family: 'Montserrat';\n  display: block;\n  margin-left: 50%;\n  margin-top: 1vh;\n  width: calc(70%);\n  transform: translateX(-50%);\n  border-radius: 1vh;\n  height: 30%;\n  outline: none;\n"]),
-    _templateObject3 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  display: block;\n  font-family: 'Montserrat';\n  font-size: 1.1rem;\n  margin-left: 50%;\n  margin-top: 1vh;\n  transform: translateX(-50%);\n"]);
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  display: inline-block;\n  width: calc(49%);\n  margin-left: 1%;\n  height: 100%;\n  border-radius: 1vh;\n  overflow: hidden;\n"]),
+    _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  font-family: 'Montserrat';\n  display: block;\n  margin-left: 50%;\n  margin-top: 3vh;\n  width: 100%;\n  transform: translate(-50%,-50%);\n  border-radius: 1vh;\n  height: 4vh;\n  outline: none;\n  border: 0px;\n  background-color: white;\n"]);
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -184,7 +206,6 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div(_templateObject);
 var Selector = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.select(_templateObject2);
-var Topic = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.span(_templateObject3);
 
 var _default =
 /*#__PURE__*/
@@ -203,39 +224,34 @@ function (_Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Container, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 30
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Topic, {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Selector, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
-        }
-      }, "Clock font"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Selector, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 31
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 32
         }
-      }, "1"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
+      }, "clock font"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 33
         }
-      }, "2"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
+      }, "clock font"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 34
         }
-      }, "3"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
+      }, "clock font"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 35
         }
-      }, "4")));
+      }, "clock font")));
     }
   }]);
 
@@ -324,8 +340,8 @@ function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__clockEditor__ = __webpack_require__("./components/textEditor/clockEditor.js");
 var _jsxFileName = "/home/tauhoo/Documents/countdown/components/textEditor/index.js";
 
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  height: 69vh;\n  width: 50vw;\n  margin-left: 50vw;\n  padding-top: 1vh;\n"]),
-    _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  height: 13vh;\n  width: calc(100%-1vh);\n  margin-bottom: 1vh;\n  margin-left: 1vh;\n  margin-right: 1vh;\n"]);
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  height: 69vh;\n  width: 25vw;\n  transform: translateX(-100%);\n  margin-left: 100vw;\n  padding-top: 1vh;\n"]),
+    _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  margin-left: 1vh;\n  margin-right: 1vh;\n"]);
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -369,32 +385,32 @@ function (_Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Container, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 23
+          lineNumber: 21
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(TopContainer, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 24
+          lineNumber: 22
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_4__textEditor__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 25
+          lineNumber: 23
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_5__clockEditor__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 26
+          lineNumber: 24
         }
       })), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_2__textEffect__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 28
+          lineNumber: 26
         }
       }), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(__WEBPACK_IMPORTED_MODULE_3__clockEffect__["a" /* default */], {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 29
+          lineNumber: 27
         }
       }));
     }
@@ -418,9 +434,8 @@ function (_Component) {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_styled_components___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_styled_components__);
 var _jsxFileName = "/home/tauhoo/Documents/countdown/components/textEditor/textEditor.js";
 
-var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  display: inline-block;\n  background-color: white;\n  margin-right: 1%;\n  width: calc(49%);\n  height: 100%;\n  border-radius: 1vh;\n  overflow: hidden;\n"]),
-    _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  font-family: 'Montserrat';\n  display: block;\n  margin-left: 50%;\n  margin-top: 1vh;\n  width: calc(70%);\n  transform: translateX(-50%);\n  border-radius: 1vh;\n  height: 30%;\n  outline: none;\n"]),
-    _templateObject3 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  display: block;\n  font-family: 'Montserrat';\n  font-size: 1.1rem;\n  margin-left: 50%;\n  margin-top: 1vh;\n  transform: translateX(-50%);\n"]);
+var _templateObject = /*#__PURE__*/ _taggedTemplateLiteral(["\n  display: inline-block;\n  margin-right: 1%;\n  width: calc(49%);\n  height: 100%;\n  border-radius: 1vh;\n  overflow: hidden;\n"]),
+    _templateObject2 = /*#__PURE__*/ _taggedTemplateLiteral(["\n  font-family: 'Montserrat';\n  display: block;\n  margin-left: 50%;\n  margin-top: 3vh;\n  width: 100%;\n  transform: translate(-50%,-50%);\n  border-radius: 1vh;\n  height: 4vh;\n  outline: none;\n  border: 0px;\n  background-color: white;\n"]);
 
 function _typeof(obj) { if (typeof Symbol === "function" && typeof Symbol.iterator === "symbol") { _typeof = function _typeof(obj) { return typeof obj; }; } else { _typeof = function _typeof(obj) { return obj && typeof Symbol === "function" && obj.constructor === Symbol && obj !== Symbol.prototype ? "symbol" : typeof obj; }; } return _typeof(obj); }
 
@@ -442,7 +457,6 @@ function _taggedTemplateLiteral(strings, raw) { if (!raw) { raw = strings.slice(
 
 var Container = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.div(_templateObject);
 var Selector = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.select(_templateObject2);
-var Topic = __WEBPACK_IMPORTED_MODULE_1_styled_components___default.a.span(_templateObject3);
 
 var _default =
 /*#__PURE__*/
@@ -461,39 +475,34 @@ function (_Component) {
       return __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Container, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 38
+          lineNumber: 30
         }
-      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Topic, {
+      }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Selector, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 39
-        }
-      }, "Text font"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement(Selector, {
-        __source: {
-          fileName: _jsxFileName,
-          lineNumber: 40
+          lineNumber: 31
         }
       }, __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 41
+          lineNumber: 32
         }
-      }, "1"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
+      }, "text font"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 42
+          lineNumber: 33
         }
-      }, "2"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
+      }, "text font"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 43
+          lineNumber: 34
         }
-      }, "3"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
+      }, "text font"), __WEBPACK_IMPORTED_MODULE_0_react___default.a.createElement("option", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 44
+          lineNumber: 35
         }
-      }, "4")));
+      }, "text font")));
     }
   }]);
 
@@ -845,6 +854,13 @@ module.exports = require("next/head");
 /***/ (function(module, exports) {
 
 module.exports = require("react");
+
+/***/ }),
+
+/***/ "react-simple-timefield":
+/***/ (function(module, exports) {
+
+module.exports = require("react-simple-timefield");
 
 /***/ }),
 
